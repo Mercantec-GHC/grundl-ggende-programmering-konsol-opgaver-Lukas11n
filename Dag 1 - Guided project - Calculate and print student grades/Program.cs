@@ -19,23 +19,26 @@ int zahirah3 = 73;
 int zahirah4 = 85;
 int zahirah5 = 79;
 
-int jeong1 = 90; 
-int jeong2 = 92; 
-int jeong3 = 98; 
-int jeong4 = 100; 
+int jeong1 = 90;
+int jeong2 = 92;
+int jeong3 = 98;
+int jeong4 = 100;
 int jeong5 = 97;
 
-int sophiaGrade = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
+int sophiaGade = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
 int nicolasGrade = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
 int zahirahGrade = zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5;
 int jeongGrade = jeong1 + jeong2 + jeong3 + jeong4 + jeong5;
-Console.WriteLine($"sophia grade: {sophiaGrade}");
 
-Console.WriteLine($"nicolas grade: {nicolasGrade}");
+decimal sophiaScore = (decimal)sophiaGade / currentAssignments;
+decimal nicolasScore = (decimal)nicolasGrade / currentAssignments;
+decimal zahirahScore = (decimal)jeongGrade / currentAssignments;
+decimal jeongScore = (decimal)jeongGrade / currentAssignments;
 
-Console.WriteLine($"zahirah grade: {zahirahGrade}");
-
-Console.WriteLine($"jeong grade: {jeongGrade}");
+Console.WriteLine("Sophia grade: " + sophiaScore + " A");
+Console.WriteLine("Nicolas grade: " + nicolasScore + " B");
+Console.WriteLine("Zahirah grade: " + zahirahScore + " B");
+Console.WriteLine("Jeong grade: " + jeongScore + " A");
 
 
 Console.ReadLine(); 
