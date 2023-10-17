@@ -65,7 +65,11 @@ largerValue = Math.Max(firstValue, secondValue);
 Console.WriteLine(largerValue);
 */
 
+
 int i = 0;
+
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
 
 while (i == 0)
 {
@@ -75,19 +79,18 @@ while (i == 0)
     {
         Console.WriteLine("subscription service");
         Console.ReadLine();
-        Console.WriteLine("when does your subscription expire?");
-        int svar = Convert.ToInt32(Console.ReadLine());
+       
 
-        if (svar <= 10)
+        if (daysUntilExpiration <= 10)
         {
-            if (svar <= 5)
+            if (daysUntilExpiration <= 5)
             {
-                Console.WriteLine($"Your subscription expires in {svar} days.");
+                Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
                 Console.WriteLine("Renew now and save 10%!");
                 Console.ReadLine();
-                if (svar <= 1)
+                if (daysUntilExpiration <= 1)
                 {
-                    if (svar == 0)
+                    if (daysUntilExpiration == 0)
                     {
                         Console.WriteLine("Your subscription has expired.");
                         Console.ReadLine();
@@ -106,7 +109,7 @@ while (i == 0)
                 Console.ReadLine();
             }
         }
-        else if (svar > 10)
+        else if (daysUntilExpiration > 10)
         {
             Console.WriteLine("have a nice day");
             Console.ReadLine();
@@ -127,3 +130,5 @@ while (i == 0)
         Console.WriteLine("invalid input");
     }
 }
+
+
