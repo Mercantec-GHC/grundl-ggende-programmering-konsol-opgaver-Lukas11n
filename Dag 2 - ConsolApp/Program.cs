@@ -196,7 +196,9 @@ foreach (string orderID in orderIDs)
 */
 
 
-/*
+
+using System.Globalization;
+
 int currentAssignments = 5;
 
 int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
@@ -236,17 +238,32 @@ string andrewGrade = GetGrade(andrewScore);
 string emmaGrade = GetGrade(emmaScore);
 string loganGrade = GetGrade(loganScore);
 
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("sophia:\t\t" + sophiaScore + "\t" + sophiaGrade);
-Console.WriteLine("andre:\t\t" + andrewScore + "\t" + andrewGrade);
-Console.WriteLine("emma:\t\t" + emmaScore + "\t" + emmaGrade);
-Console.WriteLine("logan:\t\t" + loganScore + "\t" + loganGrade);
+decimal sophiaExtraCredit = 3.68m;
+decimal andrewExtraCredit = 1.78m;
+decimal emmaExtraCredit = 5.34m;
+decimal loganExtraCredit = 1.92m;
+
+decimal SophiaScoreAfterExtraCredit = sophiaScore + sophiaExtraCredit;
+decimal andrewScoreAfterExtraCredit = andrewScore + andrewExtraCredit;
+decimal emmaScoreAfterExtraCredit = emmaScore + emmaExtraCredit;
+decimal loganScoreAfterExtraCredit = loganScore + loganExtraCredit;
+
+string sophiaGradeExtraCredit = GetGrade(SophiaScoreAfterExtraCredit);
+string andrewGradeExtraCredit = GetGrade(andrewScoreAfterExtraCredit);
+string emmaGradeExtraCredit = GetGrade(emmaScoreAfterExtraCredit);
+string loganGradeExtraCredit = GetGrade(loganScoreAfterExtraCredit);
+
+Console.WriteLine("Student\t\tScore\tGrade\tExtra credit\tFinal score\tFinal grade\n");
+Console.WriteLine("sophia:\t\t" + sophiaScore + "\t" + sophiaGrade + "\t(" + sophiaExtraCredit + " pts)\t" + SophiaScoreAfterExtraCredit + "\t" + sophiaGradeExtraCredit);
+Console.WriteLine("andre:\t\t" + andrewScore + "\t" + andrewGrade + "\t(" + andrewExtraCredit + " pts)\t" + andrewScoreAfterExtraCredit + "\t" + andrewGradeExtraCredit);
+Console.WriteLine("emma:\t\t" + emmaScore + "\t" + emmaGrade + "\t(" + emmaExtraCredit + " pts)\t" + emmaScoreAfterExtraCredit + "\t" + emmaGradeExtraCredit);
+Console.WriteLine("logan:\t\t" + loganScore + "\t" + loganGrade + "\t(" + loganExtraCredit + " pts)\t" + loganScoreAfterExtraCredit + "\t" + loganGradeExtraCredit);
 
 Console.WriteLine("Press the Enter key to exit");
 Console.ReadLine();
     
 
-    // her laver jeg en funktion som regner ud hvad deres karekter er i forhold til deres Grade
+    // her laver jeg en funktion som regner ud hvad deres karekter er i forhold til deres score
     //GetGrade har jeg lavet til en static metode hvilket metyder jeg kan bruge en uden at lave en instans af den
     // for at kalde metoden score skal man have en decimal som i dette tilfælde er deres score
 static string GetGrade(decimal score)
@@ -278,5 +295,7 @@ static string GetGrade(decimal score)
     else
         return "F";
 }
-*/
+
+
+
 
