@@ -65,7 +65,7 @@ largerValue = Math.Max(firstValue, secondValue);
 Console.WriteLine(largerValue);
 */
 
-
+/*
 int i = 0;
 
 Random random = new Random();
@@ -130,5 +130,153 @@ while (i == 0)
         Console.WriteLine("invalid input");
     }
 }
+*/
 
+/*
+ Array:
+
+ string[] fraudulentOrderIDs = new string[3];
+
+fraudulentOrderIDs[0] = "A123";
+fraudulentOrderIDs[1] = "B456";
+fraudulentOrderIDs[2] = "C789";
+// fraudulentOrderIDs[3] = "D000";
+
+Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+
+fraudulentOrderIDs[0] = "F000";
+
+Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
+ */
+
+/*
+Array: 
+
+ string[] fraudulentOrderIDs = { "A123", "B456", "C789" };
+
+Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+*/
+
+/*
+foreach: 
+
+ string[] names = { "Rowena", "Robin", "Bao" };
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+*/
+/*
+
+int[] inventory = { 200, 450, 700, 175, 250 };
+int sum = 0;
+int bin = 0;
+foreach (int items in inventory)
+{
+    sum += items;
+    bin++;
+    Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+}
+Console.WriteLine($"We have {sum} items in inventory.");
+*/
+
+/*
+string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+foreach (string orderID in orderIDs)
+{
+    if (orderID.StartsWith("B"))
+    {
+        Console.WriteLine(orderID);
+    }
+}
+*/
+
+
+/*
+int currentAssignments = 5;
+
+int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
+int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
+int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
+int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
+
+int sophiaSum = 0;
+int andrewSum = 0;
+int emmaSum = 0;
+int loganSum = 0;
+
+foreach (int score in sophiaScores)
+        {
+            sophiaSum += score;
+        }
+foreach (int score in andrewScores)
+        {
+            andrewSum += score;
+        }
+foreach (int score in emmaScores)
+        {
+            emmaSum += score;
+        }
+foreach (int score in loganScores)
+        {
+            loganSum += score;
+        }
+
+decimal sophiaScore = (decimal)sophiaSum / currentAssignments;
+decimal andrewScore = (decimal)andrewSum / currentAssignments;
+decimal emmaScore = (decimal)emmaSum / currentAssignments;
+decimal loganScore = (decimal)loganSum / currentAssignments;
+
+string sophiaGrade = GetGrade(sophiaScore);
+string andrewGrade = GetGrade(andrewScore);
+string emmaGrade = GetGrade(emmaScore);
+string loganGrade = GetGrade(loganScore);
+
+Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("sophia:\t\t" + sophiaScore + "\t" + sophiaGrade);
+Console.WriteLine("andre:\t\t" + andrewScore + "\t" + andrewGrade);
+Console.WriteLine("emma:\t\t" + emmaScore + "\t" + emmaGrade);
+Console.WriteLine("logan:\t\t" + loganScore + "\t" + loganGrade);
+
+Console.WriteLine("Press the Enter key to exit");
+Console.ReadLine();
+    
+
+    // her laver jeg en funktion som regner ud hvad deres karekter er i forhold til deres Grade
+    //GetGrade har jeg lavet til en static metode hvilket metyder jeg kan bruge en uden at lave en instans af den
+    // for at kalde metoden score skal man have en decimal som i dette tilfælde er deres score
+static string GetGrade(decimal score)
+{
+    if (score >= 97)
+        return "A+";
+    else if (score >= 93)
+        return "A";
+    else if (score >= 90)
+        return "A-";
+    else if (score >= 87)
+        return "B+";
+    else if (score >= 83)
+        return "B";
+    else if (score >= 80)
+        return "B-";
+    else if (score >= 77)
+        return "C+";
+    else if (score >= 73)
+        return "C";
+    else if (score >= 70)
+        return "C-";
+    else if (score >= 67)
+        return "D+";
+    else if (score >= 63)
+        return "D";
+    else if (score >= 60)
+        return "D-";
+    else
+        return "F";
+}
+*/
 
