@@ -35,10 +35,11 @@ decimal nicolasScore = (decimal)nicolasGrade / currentAssignments;
 decimal zahirahScore = (decimal)jeongGrade / currentAssignments;
 decimal jeongScore = (decimal)jeongGrade / currentAssignments;
 
-Console.WriteLine("Sophia grade: " + sophiaScore + " A");
-Console.WriteLine("Nicolas grade: " + nicolasScore + " B");
-Console.WriteLine("Zahirah grade: " + zahirahScore + " B");
-Console.WriteLine("Jeong grade: " + jeongScore + " A");
+Console.WriteLine($"Sophia grade: {sophiaScore} A");
+Console.WriteLine($"Nicolas grade: {nicolasScore} B");
+Console.WriteLine($"Zahirah grade: {zahirahScore} B");
+Console.WriteLine($"Jeong grade: {jeongScore} A");
+
 
 
 Console.ReadLine(); 
