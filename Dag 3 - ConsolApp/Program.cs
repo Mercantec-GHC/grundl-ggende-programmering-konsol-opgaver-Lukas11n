@@ -238,7 +238,7 @@ do
 } while (current != 7);
 */
 
-/*
+
 int round = 1;
 int hero = 20;
 int monster = 20;
@@ -258,13 +258,13 @@ do
     
     round++;
 
-}
+} 
 while (hero > 0 && monster > 0);
 
 Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
-*/
 
 
+/*
 // the ourAnimals array will store the following: 
 
 string animalSpecies = "";
@@ -585,3 +585,4 @@ do
     readResult = Console.ReadLine();
 
 } while (menuSelection != "exit");
+*/
